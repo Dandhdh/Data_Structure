@@ -8,15 +8,21 @@ public class Sort_heapSort {
     public static <AnyType extends Comparable<? super AnyType>>
     void heapSort(AnyType[] a){
 
-        for(int i = a.length/2-1; i>=0; i--){      //建堆
+        //第一次调整堆
+        for(int i = a.length/2-1; i>=0; i--){
             percDown(a,i,a.length);
         }
+        //第一次调整结束后，将根节点(即最大值)换回数组最后，
+        //再比较数组剩余部分
         for(int i = a.length-1; i>0; i--){
             swapReferencec(a,0,i);
+            //此时堆的根节点是最小的
+            //直接往下比较就可以了
             percDown(a,0,i);
         }
     }
 
+    //用于调整堆后，获取最大值
     private static <AnyType extends Comparable<? super AnyType>>
     void percDown(AnyType[] a, int i, int n) {
 
@@ -25,12 +31,16 @@ public class Sort_heapSort {
 
         for(tmp = a[i]; leftChild(i)<n; i=child){
             child = leftChild(i);
+            //第一次调整时跳过，因为child==n-1
+            //比较左右儿子，选出大的跟父节点比较
             if(child != n-1 && a[child].compareTo(a[child+1])<0){
                 child++;
             }
-            if(tmp.compareTo(a[child])<0)
+            if(tmp.compareTo(a[child])<0){
                 a[i] = a[child];
-            else
+                //将父节点与子节点值交换
+                //但是仍不推出循环，使用i = child往下比较
+            }else
                 break;
         }
         a[i]=tmp;
