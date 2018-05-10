@@ -2,6 +2,7 @@ package Algorithm.GreedyAlgorithm;
 
 /**
  * 问题描述：
+ * 活动选择问题
  *
  *假设有一个需要使某一资源的n个活动组成的集合S={a1，a2，a3...an}。
  * 该资源一次只能被一个活动占用，每个活动ai有一个开始时间Si和结束时间Fi，且0<=Si<Fi<∞。
@@ -42,7 +43,17 @@ public class greedy_activity_selector {
                 b[i]=false;
         }
         for(int i=1;i<b.length;i++)
-            System.out.println(b[i]);
+            System.out.print(b[i]+"  ");
+    }
+
+    public static void main(String[] args) {
+
+        int[] s = {1,3,0,5,3,5,6,8,8,2,12};
+        int[] f = {4,5,6,7,8,9,10,11,12,14,14};
+        boolean[] b = new boolean[11];
+
+        greedy_activity_selector(s,f,b);
+
     }
 
 }
