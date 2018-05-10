@@ -24,6 +24,8 @@ import java.util.Collections;
  *
  * 所以计算b[i]的过程是，遍历b[i]之前的所有位置j，找出满足关系式的最大的b[j].
  * 得到b[0...n-1]之后，遍历所有的b[i]找到最大值，即为最大递增子序列。 总的时间复杂度为O(N2).
+ *
+ * 使用动态规划方法的到O(N2)的时间复杂度算法
  */
 public class DP_LIS {
 
@@ -59,6 +61,7 @@ public class DP_LIS {
         int[] b = new int[A.length];
         int[] b1 = new int[A.length];
         b[0] = 1;
+        //b1数组存储其前驱的index
         b1[0] = -1;
         int result = 1;
         int index = 0;
