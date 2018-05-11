@@ -1,4 +1,4 @@
-package Algorithm.BigData;
+package Algorithm.BigMap;
 
 /**
  * BigmapsËã·¨
