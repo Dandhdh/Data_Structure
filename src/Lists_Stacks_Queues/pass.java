@@ -55,7 +55,7 @@ public class pass {
 	}
 	
     public static void main(String[] args) {
-		pass(722, 3000);
+		pass(6, 10);
 	}
 	
 }

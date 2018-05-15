@@ -25,3 +25,4 @@ A,B 两个文件，各存放 50 亿条 URL，每条 URL 占用 64 字节，内存限制是 4G，让你找出
 [布隆过滤器 -- 空间效率很高的数据结构](https://segmentfault.com/a/1190000002729689)                  
 [大量数据去重：Bitmap和布隆过滤器(Bloom Filter)](https://blog.csdn.net/zdxiq000/article/details/57626464)   
 [BloomFilter——大规模数据处理利器](https://www.cnblogs.com/heaad/archive/2011/01/02/1924195.html)
+[网络爬虫：URL去重策略之布隆过滤器(BloomFilter)的使用](https://blog.csdn.net/lemon_tree12138/article/details/47973715)
