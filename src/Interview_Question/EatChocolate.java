@@ -44,7 +44,6 @@ public class EatChocolate {
             while (left < right) {
                 long mid = (right - left) / 2 + left;
                 int temp = isValid(mid, days, value);
-                System.out.println("mid:"+mid+"  temp:"+temp);
                 if (temp < 0) {
                     right = mid - 1;
                 } else if (temp > 0) {
