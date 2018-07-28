@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Data_Structure.iml" filepath="$PROJECT_DIR$/.idea/Data_Structure.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../spring_activeMQ/spring_activeMQ.iml" filepath="$PROJECT_DIR$/../spring_activeMQ/spring_activeMQ.iml" />
     </modules>
   </component>
 </project>

@@ -1,4 +1,4 @@
-package Lists_Stacks_Queues;
+package Sort;
 
 import java.util.ArrayList;
 

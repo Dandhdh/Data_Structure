@@ -1,8 +1,8 @@
 package Algorithm.LRU;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 import java.util.Set;
 import java.util.concurrent.*;
@@ -38,7 +38,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class LRUAbstractMap extends java.util.AbstractMap {
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(LRUAbstractMap.class);
+    //private final static Logger LOGGER = LoggerFactory.getLogger(LRUAbstractMap.class);
 
     /**
      * 检查是否超期线程
@@ -332,7 +332,8 @@ public class LRUAbstractMap extends java.util.AbstractMap {
     }
 
     private void lruCallback(){
-        LOGGER.debug("lruCallback");
+        //LOGGER.debug("lruCallback");
+        System.out.println("lruCallback");
     }
 
 
@@ -352,7 +353,8 @@ public class LRUAbstractMap extends java.util.AbstractMap {
                         remove(node.key) ;
                     }
                 } catch (Exception e) {
-                    LOGGER.error("InterruptedException");
+                    //LOGGER.error("InterruptedException");
+                    System.out.println("Interruptedexception!!");
                 }
             }
         }
