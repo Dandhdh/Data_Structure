@@ -85,6 +85,14 @@ public class LRUAbstractMap extends java.util.AbstractMap {
      */
     private volatile AtomicInteger size  ;
 
+    public LRUAbstractMap(int size){
+        arraySize = size;
+        arrays = new Object[size];
+
+        // 开启一个线程检查最先放入队列的值是否超期
+        executeCheckTime();
+    }
+
 
     public LRUAbstractMap() {
 
